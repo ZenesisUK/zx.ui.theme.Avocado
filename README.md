@@ -3,8 +3,10 @@ A modern-looking theme for Qooxdoo.
 Comes with three variants: main green theme (zx.ui.theme.avocado.Avocado), red variant (zx.ui.theme.avocado.AvocadoRed), and blue variant (zx.ui.theme.avocado.AvocadoBlue)
 
 # How it looks
-![Example image 1](example-1.jpg)
-![Example image 2](example-2.jpg)
+<!-- ![]() width=500 -->
+<!-- ![Example image 2](example-2.jpg) width=500 -->
+<img alt="Example image 1" src="example-1.jpg" width="500"/>
+<img alt="Example image 2" src="example-2.jpg" width="500"/>
 
 # Demo
 This repo includes a demo where you can see the theme in action. 
