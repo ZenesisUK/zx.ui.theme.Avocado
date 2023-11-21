@@ -48,15 +48,15 @@ qx.Class.define("zx.ui.theme.avocado.demo.view.Header", {
     version.setFont("default");
     version.setAppearance("app-header-label");
 
-    //set default theme
     var themes = qx.Theme.getAll();
-    for (var theme in themes) {
-      if (theme == "zx.ui.theme.avocado.Avocado") {
-        theme = qx.Theme.getByName(theme);
-        qx.theme.manager.Meta.getInstance().setTheme(theme);
-        break;
-      }
-    }
+    // //set default theme
+    // for (var theme in themes) {
+    //   if (theme == "zx.ui.theme.avocado.Avocado") {
+    //     theme = qx.Theme.getByName(theme);
+    //     qx.theme.manager.Meta.getInstance().setTheme(theme);
+    //     break;
+    //   }
+    // }
 
 
     // Build select-box

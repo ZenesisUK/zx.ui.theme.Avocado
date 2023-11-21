@@ -1,22 +1,21 @@
 /* ************************************************************************
-
-  Tangible Theme for Qooxdoo
-
-  Copyright:
-     2018 IT'IS Foundation
-     2020 Tobi Oetiker
-
-  License:
-     MIT: https://opensource.org/licenses/MIT
-     See the LICENSE file in the project's top-level directory for details.
-
-  Authors:
-    * Tobias Oetiker (oetiker)
-
-  Origin:
-    This theme is based in large parts on the osparc.theme
-
-************************************************************************ */
+ *
+ *  Zen [and the art of] CMS
+ *
+ *  https://zenesis.com
+ *
+ *  Copyright:
+ *    2019-2022 Zenesis Ltd, https://www.zenesis.com
+ *
+ *  License:
+ *    MIT (see LICENSE in project root)
+ *
+ *  Authors:
+ *    John Spackman (john.spackman@zenesis.com, @johnspackman)
+ *    Patryk Malinowski (@p9malino26)
+ *    Will Johnson (@WillsterJohnsonAtZenesis)
+ *
+ * ************************************************************************ */
 
 /**
  * The simple qooxdoo font theme.

@@ -6,7 +6,7 @@
   "applications": [
     {
       "class": "zx.ui.theme.avocado.demo.Application",
-      "theme": "qx.theme.Indigo",
+      "theme": "zx.ui.theme.avocado.Avocado",
       "name": "widgetbrowser",
       "title": "WidgetBrowser",
       "include": [
@@ -19,19 +19,7 @@
         "qx.theme.TangibleDark",
         "zx.ui.theme.avocado.Avocado",
         "zx.ui.theme.avocado.AvocadoRed",
-        "zx.ui.theme.avocado.AvocadoBlue",
-        "zx.ui.theme.avocado.demo.pages.Tree",
-        "zx.ui.theme.avocado.demo.pages.List",
-        "zx.ui.theme.avocado.demo.pages.Table",
-        "zx.ui.theme.avocado.demo.pages.Form",
-        "zx.ui.theme.avocado.demo.pages.ToolBar",
-        "zx.ui.theme.avocado.demo.pages.Window",
-        "zx.ui.theme.avocado.demo.pages.Tab",
-        "zx.ui.theme.avocado.demo.pages.Control",
-        "zx.ui.theme.avocado.demo.pages.Embed",
-        "zx.ui.theme.avocado.demo.pages.EmbedFrame",
-        "zx.ui.theme.avocado.demo.pages.Basic",
-        "zx.ui.theme.avocado.demo.pages.Misc"
+        "zx.ui.theme.avocado.AvocadoBlue"
       ]
     }
   ],

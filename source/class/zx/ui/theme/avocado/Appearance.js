@@ -1,3 +1,22 @@
+/* ************************************************************************
+ *
+ *  Zen [and the art of] CMS
+ *
+ *  https://zenesis.com
+ *
+ *  Copyright:
+ *    2023 Zenesis Ltd, https://www.zenesis.com
+ *
+ *  License:
+ *    MIT (see LICENSE in project root)
+ *
+ *  Authors:
+ *    John Spackman (john.spackman@zenesis.com, @johnspackman)
+ *    Patryk Malinowski (@p9malino26)
+ *    Will Johnson (@WillsterJohnsonAtZenesis)
+ *
+ * ************************************************************************ */
+
 /**
  * @usefont(MaterialIcons)
  */
@@ -1363,10 +1382,8 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
         if (states.disabled) textColor += "-disabled";
         else if (states.hovered) textColor += "-hovered";
 
-        console.log({ textColor });
         return {
           textColor,
-          // padding: [2, 3],
           margin: [-2, 0, 0, 0]
         };
       }
@@ -1528,7 +1545,7 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
           margin: [2, 4, 2, 0],
           textColor: "text-on-primary",
           maxWidth: 25,
-          backgroundColor: "widget"
+          backgroundColor: "primary"
         };
       }
     },
@@ -2362,7 +2379,7 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
     scrollbar: {
       style(states) {
         return {
-          decorator: "rounded-edges-left",
+          decorator: "scrollbar",
           backgroundColor: "white",
           width: states.horizontal ? undefined : SCROLLBAR_TRACK_THICKNESS,
           height: states.horizontal ? SCROLLBAR_TRACK_THICKNESS : undefined,
@@ -2547,7 +2564,7 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
       style(states) {
         return {
           width: COMBOBOX_BUTTON_WIDTH,
-          height: 5,
+          height: 6,
           padding: [-1, 0, 0, 0]
           // decorator: "spinner-button",
         };
@@ -2566,8 +2583,7 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
       style(states) {
         return {
           icon: zx.ui.theme.avocado.Image.URLS["arrow-up-small"],
-          marginTop: 0,
-          paddingTop: 2
+          paddingTop: 0
           // decorator: "spinner-upbutton"
         };
       }
@@ -2579,7 +2595,7 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
       style(states) {
         return {
           icon: zx.ui.theme.avocado.Image.URLS["arrow-down-small"],
-          marginBottom: 1,
+          marginBottom: 0,
           paddingBottom: 2
           // decorator: "spinner-downbutton"
         };
@@ -3014,7 +3030,6 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
     ---------------------------------------------------------------------------
     */
     datechooser: {
-      // include: "complex-widget",
       style(states) {
         return {
           decorator: "datechooser",
@@ -3106,14 +3121,20 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
 
     "datechooser/day": {
       style(states) {
-        console.log("datechooser/day", states);
-        return {
-          textAlign: "center",
+        let backgroundColor;
+        
+        if (states.selected && !(states.otherMonth || states.disabled)) {
+          backgroundColor = "#FFFFFF44";
+        } else if (states.today) {
+          backgroundColor = "primary";
+        } else
+          backgroundColor = "transparent";
 
-          backgroundColor: states.selected && !(states.otherMonth || states.disabled) ? "#FFFFFF44" : "transparent",
+        return {
+          textAlign: "center",          
+          backgroundColor,
           textColor: states.otherMonth || states.disabled ? "text-disabled-on-widget" : states.selected ? "text-on-widget-selected" : "text-on-widget",
           padding: states.today ? [1, 3] : [2, 4]
-          // width: 60,
         };
       }
     },
@@ -3127,7 +3148,6 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
           textColor: "text-on-widget",
           padding: [2, 4],
           decorator: decorator
-          // width: 60,
         };
       }
     },

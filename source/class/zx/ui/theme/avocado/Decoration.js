@@ -1,3 +1,22 @@
+/* ************************************************************************
+ *
+ *  Zen [and the art of] CMS
+ *
+ *  https://zenesis.com
+ *
+ *  Copyright:
+ *    2019-2022 Zenesis Ltd, https://www.zenesis.com
+ *
+ *  License:
+ *    MIT (see LICENSE in project root)
+ *
+ *  Authors:
+ *    John Spackman (john.spackman@zenesis.com, @johnspackman)
+ *    Patryk Malinowski (@p9malino26)
+ *    Will Johnson (@WillsterJohnsonAtZenesis)
+ *
+ * ************************************************************************ */
+
 const SCROLLBAR_RADIUS = 1e5;
 const RADIUS = 10;
 const GROUP_ROUNDED_EDGES = 3;
@@ -191,7 +210,6 @@ const HELPER = {
 };
 
 qx.Theme.define("zx.ui.theme.avocado.Decoration", {
-  // aliases: { decoration: "qx/decoration/Simple" },
   decorations: {
     "table-filter-button-hovered": {
       decorator: [qx.ui.decoration.MSingleBorder],
@@ -214,7 +232,10 @@ qx.Theme.define("zx.ui.theme.avocado.Decoration", {
       }
     },
     "no-such-decoration": {
-      decorator: [zx.ui.theme.avocado.MCssBoxShadow]
+      style: {
+        width: 1,
+        color: "black"
+      }
     },
 
     "smart-content-tree-header-collapsed": {
@@ -827,6 +848,18 @@ qx.Theme.define("zx.ui.theme.avocado.Decoration", {
         colorTop: "text-hint-on-surface"
       }
     },
+    /*
+      ---------------------------------------------------------------------------
+        SCROLL BAR
+      ---------------------------------------------------------------------------
+      */
+     "scrollbar": {
+      style: {
+        width: 1,
+        radius: 10,
+        color: "transparent"
+      }
+     },
 
     /*
       ---------------------------------------------------------------------------
