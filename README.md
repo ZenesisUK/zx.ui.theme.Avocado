@@ -17,4 +17,4 @@ Then open `localhost:8080` in your browser.
 - Ensure you cloned this repo
 - In your Qooxdoo project, add the path to the root folder of this repo to the `libraries` section in your compile.json
 - In `compile.json`, add the following line into your application in the `applications` section: `theme: zx.ui.theme.avocado.Avocado`
-  *For the blue variant of the theme, instead add `theme: zx.ui.theme.avocado.AvocadoBlue` and for the red variant of the theme, it's `theme: zx.ui.theme.avocado.AvocadoRed`*
+  (*For the blue variant of the theme, instead add `theme: zx.ui.theme.avocado.AvocadoBlue` and for the red variant of the theme, it's `theme: zx.ui.theme.avocado.AvocadoRed`*)
