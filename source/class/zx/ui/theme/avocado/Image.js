@@ -93,7 +93,10 @@ qx.Class.define("zx.ui.theme.avocado.Image", {
       "menu-radiobutton": "@MaterialIcons/radio_button_unchecked/15",
 
       // tabview
-      "tabview-close": "@MaterialIcons/close/12"
+      "tabview-close": "@MaterialIcons/close/12",
+
+      "user-circle": "@MaterialIcons/account_circle/18",
+      "calendar": "@MaterialIcons/calendar_month/14",
     }
   }
 });

@@ -938,7 +938,7 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
         }
 
         return {
-          icon: "@MaterialIcons/account_circle",
+          icon: zx.ui.theme.avocado.Image.URLS["user-circle"],
           margin: [3, 8],
           decorator: decorator,
           padding: [3, 0, 0, 3],
@@ -1652,8 +1652,6 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
       include: "textfield",
       style(states) {
         return {
-          //decorator: HELPER.pickDecorator("material-textfield", states),
-          //padding: HELPER.getTextPadding(states),
           decorator: "combobox-textfield"
         };
       }
@@ -2626,7 +2624,7 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
 
       style(states) {
         return {
-          icon: "@MaterialIcons/calendar_month/14",
+          icon: zx.ui.theme.avocado.Image.URLS["calendar"],
           padding: [2, 0],
           margin: 0
         };
@@ -3304,7 +3302,7 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
 
       style(states) {
         return {
-          source: "@MaterialIcons/expand_more/16",
+          source: zx.ui.theme.avocado.Image.URLS["arrow-down-small"],
           cursor: states.disabled ? undefined : "pointer",
           textColor: "text-on-primary",
           padding: [0, 5],
@@ -3344,7 +3342,7 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
         }
 
         return {
-          icon: "@MaterialIcons/expand_more/16",
+          icon: zx.ui.theme.avocado.Image.URLS["arrow-down"],
           decorator: decorator,
           margin: margin
         };
@@ -3382,7 +3380,7 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
         }
 
         return {
-          icon: "@MaterialIcons/expand_more/16",
+          icon: zx.ui.theme.avocado.Image.URLS["arrow-down"],
           decorator: decorator,
           margin: margin
         };
@@ -3570,7 +3568,7 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
       style(states) {
         return {
           cursor: states.disabled ? undefined : "pointer",
-          icon: "@MaterialIcons/close/16"
+          icon: zx.ui.theme.avocado.Image.URLS["window-close"]
         };
       }
     },
@@ -3769,7 +3767,7 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
       style(states) {
         return {
           padding: [5, 0, 0, 0],
-          source: states.open ? "@MaterialIcons/expand_less/18" : "@MaterialIcons/expand_more/18",
+          source: states.open ? zx.ui.theme.avocado.Image.URLS["arrow-up"] : zx.ui.theme.avocado.Image.URLS["arrow-down"],
           textColor: "text-on-surface"
         };
       }
@@ -4310,16 +4308,6 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
         };
       }
     },
-    
-    "prices-table-header-cell": "table-header-cell",
-    "prices-table-header-cell/label": {
-      include: "table-header-cell/label",
-      style(states) {
-        return {
-          font: "default"
-        };
-      }
-    },
 
     /*
     ---------------------------------------------------------------------------
@@ -4381,9 +4369,9 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
     "difference-header": {
       style(state) {
         return {
-          iconLeft: "@MaterialIcons/cheveron_left/16",
-          iconRight: "@MaterialIcons/cheveron_right/16",
-          iconClear: "@MaterialIcons/delete/16",
+          iconLeft: zx.ui.theme.avocado.Image.URLS["arrow-left"],
+          iconRight: zx.ui.theme.avocado.Image.URLS["arrow-right"],
+          iconClear: zx.ui.theme.avocado.Image.URLS["trash"],
           margin: [0, 8]
         };
       }
@@ -4423,5 +4411,5 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
     "difference-header/btnLeft": "difference-header-button",
     "difference-header/btnRight": "difference-header-button",
     "difference-header/btnClear": "difference-header-button"
-  }
+  },
 });

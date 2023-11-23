@@ -21,11 +21,7 @@
 const helper = zx.ui.theme.avocado.ColorHelper;
 
 qx.Theme.define("zx.ui.theme.avocado.ColorGreen", {
-  colors: {
-    // actual implementations must supply these 4 colors
-    // at least
-
-   
+  colors: {   
     // theme colors
     primary: "#067B42",
    
