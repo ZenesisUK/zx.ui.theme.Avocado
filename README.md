@@ -9,8 +9,9 @@ Comes with three variants: main green theme (zx.ui.theme.avocado.Avocado), red v
 <img alt="Example image 2" src="example-2.jpg" width="200"/>
 
 # Demo
-This repo includes a demo where you can see the theme in action. 
-To see it in action, clone this repository, `cd` into this repo's directory, and run `qx serve`.
+[Demo website link](https://zenesisuk.github.io/zx-ui-theme-avocado.github.io)
+
+If you want to run the demo yourself, clone this repository, `cd` into this repo's directory, and run `qx serve`.
 Then open `localhost:8080` in your browser.
 
 # Installation
