@@ -7,8 +7,11 @@ ABSOLUTE_TMP=$(echo "$(cd "$(dirname "$tmp")"; pwd -P)/$(basename "tmp")")
 echo "$DEPLOY_PK" > ./tmp/deploy-key
 chmod 600 ./tmp/deploy-key
 
+echo "arg 0: $0" 
+echo "arg 1: $1" 
+echo "deploy pk: $DEPLOY_PK" 
 echo "Private key permissions: $(ls -l ./tmp/deploy-key)"
-echo "Private key contents: $(cat ./tmp/deploy-key)"
+echo "Private key file contents: $(cat ./tmp/deploy-key)"
 
 npm i
 
