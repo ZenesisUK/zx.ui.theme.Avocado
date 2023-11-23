@@ -20,8 +20,8 @@ echo ">>> Building website..."
 npx qx deploy --out=./tmp/$REPO_NAME
 
 cd ./tmp/$REPO_NAME
-if [[ ! -d .git ]] ; then
-    echo "The checked out $REPO_NAME is not a .git repo!"
+if [ ! -e ./index.html ] ; then
+    echo "index.html not found! Most likely due to failure of cloning the webpage repo."
     exit 1
 fi
 
