@@ -5,7 +5,7 @@ DEPLOY_PK="$1"
 mkdir tmp
 ABSOLUTE_TMP=$(echo "$(cd "$(dirname "$tmp")"; pwd -P)/$(basename "tmp")")
 echo "$DEPLOY_PK" > ./tmp/deploy-key
-chmod 0600 ./tmp/deploy-key
+chmod 600 ./tmp/deploy-key
 npm i
 
 REPO_NAME="zx-ui-theme-avocado.github.io"
