@@ -135,22 +135,11 @@ qx.Theme.define("zx.ui.theme.avocado.ColorGreen", {
     "progressive-progressbar-percent-background": "surface",
     "progressive-progressbar-percent-text": "text-primary-on-surface",
 
-    // accordion
 
-    "accordion-panel-background": "surface",
-    "accordion-minimap-content-background": "transparent",
-    "accordion-minimap-floatybit-background": "primary",
-    "accordion-minimap-tooltip-background": "surface",
-    "accordion-minimap-skeleton-background": "primary",
 
     header_on_widget: "#FB4646",
     header: "primary",
     avocadowhite: "#FFFFFF",
-
-    cpanel: "header",
-    "cpanel-selected": () => zx.ui.theme.avocado.ColorHelper.darker("header"),
-    "text-on-cpanel": helper.onX,
-
 
   }
 });
