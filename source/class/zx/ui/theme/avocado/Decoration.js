@@ -127,12 +127,12 @@ const HELPER = {
       result.color = "error";
     }
     if (where == "right") {
-      result.style.radius = [0, WIDGET_ROUNDED_EDGES, WIDGET_ROUNDED_EDGES, 0];
+      result.style.radius = [0, 3, 3, 0];
     } else if (where == "middle") {
       result.style.radius = 0;
       result.style.width = [1, 0, 1, 1];
     } else if (where == "left") {
-      result.style.radius = [WIDGET_ROUNDED_EDGES, 0, 0, WIDGET_ROUNDED_EDGES];
+      result.style.radius = [3, 0, 0, 3];
       result.style.width = [1, 0, 1, 1];
     }
     return result;

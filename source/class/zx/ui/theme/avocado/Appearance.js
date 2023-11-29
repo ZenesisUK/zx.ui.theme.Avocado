@@ -724,6 +724,8 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
         return { decorator: undefined };
       }
     },
+    "selectbox/list/scrollbar-x": "scrollbar",
+    "selectbox/list/scrollbar-y": "scrollbar",
 
     "selectbox/arrow": {
       include: "image",
@@ -732,12 +734,21 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
         return {
           source: zx.ui.theme.avocado.Image.URLS["arrow-down"],
           alignY: "middle",
-          padding: [4, 8, 4, 8],
           width: COMBOBOX_BUTTON_WIDTH,
+          padding: 0,
           decorator: "combobox-button",
           backgroundColor: "primary",
           textColor: "text-on-primary"
         };
+      }
+    },
+
+    "selectbox-arrow-button": {
+      include: "widget",
+      style(states) {
+        return {
+          backgroundColor: "primary"
+        }
       }
     },
 
@@ -2347,6 +2358,7 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
       }
     },
     "toolbar-splitbutton/button/label": "button/label",
+    "toolbar-splitbutton/button/icon": "button/icon",
 
     "toolbar-splitbutton/arrow": {
       include: "toolbar-button",
@@ -2380,10 +2392,13 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
         return {
           icon: zx.ui.theme.avocado.Image.URLS["arrow-down"],
           decorator: decorator,
-          margin: margin
+          margin: margin,
+          textColor: "text-on-primary"
         };
       }
     },
+
+    "toolbar-splitbutton/arrow/icon": "button/icon",
 
     /*
     ---------------------------------------------------------------------------
