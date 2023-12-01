@@ -867,41 +867,6 @@ qx.Theme.define("zx.ui.theme.avocado.Decoration", {
       }
     },
 
-    /*
-    ---------------------------------------------------------------------------
-      POPOUT TABVIEW
-    ---------------------------------------------------------------------------
-    */
-
-    "popout-tabview-page-button-top": {
-      include: "tabview-page-button-top",
-      style: {
-        width: 0,
-        radius: [RADIUS, RADIUS, 0, 0]
-      }
-    },
-    "popout-tabview-page-button-bottom": {
-      include: "tabview-page-button-bottom",
-      style: {
-        width: 0,
-        radius: [0, 0, RADIUS, RADIUS]
-      }
-    },
-    "popout-tabview-page-button-left": {
-      include: "tabview-page-button-left",
-      style: {
-        width: 0,
-        radius: [RADIUS, 0, 0, RADIUS]
-      }
-    },
-    "popout-tabview-page-button-right": {
-      include: "tabview-page-button-right",
-      style: {
-        width: 0,
-        radius: [0, RADIUS, RADIUS, 0]
-      }
-    },
-
 
     /*
       ---------------------------------------------------------------------------
