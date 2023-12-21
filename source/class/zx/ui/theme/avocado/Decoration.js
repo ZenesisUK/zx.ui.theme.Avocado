@@ -1020,7 +1020,7 @@ qx.Theme.define("zx.ui.theme.avocado.Decoration", {
     combobox: {
       include: "material-textfield",
       style: {
-        backgroundColor: "textbox_background"
+        backgroundColor: "textbox-background"
       }
     },
     "combobox-textfield": {

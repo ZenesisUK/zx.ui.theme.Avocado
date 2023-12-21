@@ -36,7 +36,7 @@ qx.Theme.define("zx.ui.theme.avocado.ColorGreen", {
     secondary: "#018786",
     surface: "white",
     widget: "#333F4A",
-    textbox_background: "widget",
+    "textbox-background": "widget",
     box: "#E7E7E8",
     error: "red",
     grey: "#949494",

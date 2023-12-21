@@ -489,7 +489,7 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
           decorator: decorator,
           padding: [2, 7],
           textColor: "text-on-widget" + (states.disabled || states.readonly ? "-disabled" : ""),
-          backgroundColor: "textbox_background"
+          backgroundColor: "textbox-background"
         };
       }
     },
@@ -2555,14 +2555,23 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
           } else if (states.barLeft) {
             padding[1] -= 1;
           }
-        }
 
+        }
+        
+        let margin = [0,0,0,0];
+        if (states.barTop || states.barBottom) {
+          margin = [0,-1,0,0]
+        } else {
+          margin = [-1,0,0,0]
+        }
+        
         return {
           zIndex: states.checked ? 10 : 5,
           decorator: decorator,
           textColor: states.disabled ? "text-disabled" : states.checked ? "primary" : "black",
           padding: padding,
-          cursor: "pointer"
+          cursor: "pointer",
+          margin
         };
       }
     },
