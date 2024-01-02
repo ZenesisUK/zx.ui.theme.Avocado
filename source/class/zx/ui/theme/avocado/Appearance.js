@@ -2559,11 +2559,13 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
         }
         
         let margin = [0,0,0,0];
-        if (states.barTop || states.barBottom) {
+        if ((states.barTop || states.barBottom) && !states.lastTab) {
           margin = [0,-1,0,0]
-        } else {
-          margin = [-1,0,0,0]
-        }
+        } 
+
+        if ((states.barLeft || states.barRight) && !states.lastTab) {
+          margin = [0,0,-1,0]
+        } 
         
         return {
           zIndex: states.checked ? 10 : 5,
