@@ -693,6 +693,9 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
       }
     },
 
+    "combobox/list/scrollbar-y": "scrollbar",
+    "combobox/list/scrollbar-x": "scrollbar",
+
     /*
     ---------------------------------------------------------------------------
       SELECTBOX
@@ -1462,8 +1465,8 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
           cursor: states.disabled ? undefined : "pointer",
           decorator,
           backgroundColor: "widget",
-          minHeight: states.horizontal ? undefined : 10,
-          minWidth: states.horizontal ? 10 : undefined,
+          minHeight: states.horizontal ? undefined : SCROLLBAR_THUMB_THICKNESS,
+          minWidth: states.horizontal ? SCROLLBAR_THUMB_THICKNESS : undefined,
           maxWidth: states.horizontal ? undefined : SCROLLBAR_THUMB_THICKNESS,
           maxHeight: states.horizontal ? SCROLLBAR_THUMB_THICKNESS : undefined
         };
