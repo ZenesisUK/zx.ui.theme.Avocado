@@ -173,6 +173,7 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
     pane: {
       style(states) {
         return {
+          decorator: "groupbox",
           backgroundColor: "box",
           margin: 2
         };
