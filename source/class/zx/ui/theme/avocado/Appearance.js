@@ -168,18 +168,7 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
         style.font = "tiny";
         return style;
       }
-    },
-
-    pane: {
-      style(states) {
-        return {
-          decorator: "groupbox",
-          backgroundColor: "box",
-          margin: 2
-        };
-      }
-    },
-
+    },    
     
     "button/icon": {
       style(states) {
