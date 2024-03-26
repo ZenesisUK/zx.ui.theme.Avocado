@@ -489,8 +489,11 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
         return {
           decorator: decorator,
           padding: [2, 7],
-          textColor: "text-on-widget" + (states.disabled || states.readonly ? "-disabled" : ""),
-          backgroundColor: "textbox-background"
+          textColor: states.showingPlaceholder
+            ? undefined
+            : "text-on-widget" +
+              (states.disabled || states.readonly ? "-disabled" : ""),
+          backgroundColor: "textbox-background",
         };
       }
     },
