@@ -1810,6 +1810,7 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
 
     listitem: {
       style(states) {
+        let useSelectionState = !states.readonly && states.selected;
         var padding = [1, 5, 1, 5];
         if (states.lead) {
           padding = [2, 4, 1, 4];
@@ -1820,8 +1821,12 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
 
         return {
           padding: padding,
-          backgroundColor: states.selected ? (states.disabled ? "primary-disabled" : "primary") : "widget",
-          opacity: states.drag ? 0.5 : undefined
+          backgroundColor: useSelectionState
+            ? states.disabled
+              ? "primary-disabled"
+              : "primary"
+            : "widget",
+          opacity: states.drag ? 0.5 : undefined,
         };
       }
     },
