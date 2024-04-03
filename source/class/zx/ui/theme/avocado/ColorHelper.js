@@ -123,8 +123,8 @@ qx.Class.define("zx.ui.theme.avocado.ColorHelper", {
 
         case "disabled":
           out = qx.util.ColorUtil.scale(color, {
-            lightness: -30,
-            saturation: -70
+            lightness: -20,
+            saturation: -70,
           });
           break;
 

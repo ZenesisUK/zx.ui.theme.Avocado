@@ -21,13 +21,14 @@
 const helper = zx.ui.theme.avocado.ColorHelper;
 
 qx.Theme.define("zx.ui.theme.avocado.ColorGreen", {
-  colors: {   
+  colors: {
     // theme colors
     primary: "#067B42",
-   
+
     "text-disabled-on-box": "white",
     menu: "white",
     "border-tab": "grey",
+    "text-placeholder": "#e0e0e0",
     "text-on-box": "black",
     "half-selected": "#DEFFD5",
     "selected-on-box": "half-selected",
@@ -135,11 +136,8 @@ qx.Theme.define("zx.ui.theme.avocado.ColorGreen", {
     "progressive-progressbar-percent-background": "surface",
     "progressive-progressbar-percent-text": "text-primary-on-surface",
 
-
-
     header_on_widget: "#FB4646",
     header: "primary",
     avocadowhite: "#FFFFFF",
-
-  }
+  },
 });
