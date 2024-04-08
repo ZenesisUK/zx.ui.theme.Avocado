@@ -17,13 +17,15 @@
  *
  * ************************************************************************ */
 
-
 const helper = zx.ui.theme.avocado.ColorHelper;
 
 qx.Theme.define("zx.ui.theme.avocado.ColorGreen", {
   colors: {
     // theme colors
     primary: "#067B42",
+    secondary: "#018786",
+    surface: "white",
+    widget: "#333F4A",
 
     "text-disabled-on-box": "white",
     menu: "white",
@@ -34,9 +36,6 @@ qx.Theme.define("zx.ui.theme.avocado.ColorGreen", {
     "selected-on-box": "half-selected",
     "button-border": "#ACACAC",
     "inlinebutton-hovered": "#989898",
-    secondary: "#018786",
-    surface: "white",
-    widget: "#333F4A",
     "textbox-background": "widget",
     box: "#E7E7E8",
     error: "red",
@@ -80,6 +79,7 @@ qx.Theme.define("zx.ui.theme.avocado.ColorGreen", {
     "primary-selected_disabled": helper.xState,
     "error-focused": helper.xState,
     "widget-disabled": helper.xState,
+    "widget-selected": helper.xState,
     "widget-hovered": helper.xState,
     "primary-on-widget": "#A2D8C1",
     "toolbar-button-disabled": helper.xState,
@@ -138,6 +138,6 @@ qx.Theme.define("zx.ui.theme.avocado.ColorGreen", {
 
     header_on_widget: "#FB4646",
     header: "primary",
-    avocadowhite: "#FFFFFF",
-  },
+    avocadowhite: "#FFFFFF"
+  }
 });

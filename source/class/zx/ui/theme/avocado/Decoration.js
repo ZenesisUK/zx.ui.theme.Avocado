@@ -28,7 +28,10 @@ const HELPER = {
   scrollBarButton(where, state) {
     let style = {
       width: 1,
-      radius: where == "begin" ? [0, 0, SCROLLBAR_RADIUS, SCROLLBAR_RADIUS] : [SCROLLBAR_RADIUS, SCROLLBAR_RADIUS, 0, 0]
+      radius:
+        where == "begin"
+          ? [0, 0, SCROLLBAR_RADIUS, SCROLLBAR_RADIUS]
+          : [SCROLLBAR_RADIUS, SCROLLBAR_RADIUS, 0, 0]
     };
     if (state == "disabled") style.backgroundColor = "primary-disabled";
     else if (state == "pressed") style.backgroundColor = "primary-selected";
@@ -62,7 +65,8 @@ const HELPER = {
     };
     if (state == "disabled") style.backgroundColor = "text-disabled-on-surface";
     else if (state == "invalid") style.color = "error";
-    else if (state == "focused") style.backgroundColor = style.color = "primary-focused";
+    else if (state == "focused")
+      style.backgroundColor = style.color = "primary-focused";
     return { style };
   },
 
@@ -136,8 +140,7 @@ const HELPER = {
       result.style.width = [1, 0, 1, 1];
     }
     return result;
-  },
-
+  }
 };
 
 qx.Theme.define("zx.ui.theme.avocado.Decoration", {
@@ -233,7 +236,7 @@ qx.Theme.define("zx.ui.theme.avocado.Decoration", {
     },
 
     "material-textfield-disabled": {
-      include: "material-textfield",
+      include: "material-textfield"
     },
 
     "material-textfield-readonly": {
@@ -262,7 +265,11 @@ qx.Theme.define("zx.ui.theme.avocado.Decoration", {
         shadowVerticalLength: [3, 2, 1],
         shadowBlurRadius: [1, 2, 5],
         shadowSpreadRadius: [-2, 0, 0],
-        shadowColor: ["rgba(0, 0, 0, 0.2)", "rgba(0, 0, 0, 0.14)", "rgba(0, 0, 0, 0.12)"],
+        shadowColor: [
+          "rgba(0, 0, 0, 0.2)",
+          "rgba(0, 0, 0, 0.14)",
+          "rgba(0, 0, 0, 0.12)"
+        ],
 
         transitionProperty: ["all"],
         transitionDuration: "0s",
@@ -458,18 +465,39 @@ qx.Theme.define("zx.ui.theme.avocado.Decoration", {
 
     "button-box": HELPER.toolbarButton(),
     "button-box-disabled": HELPER.toolbarButton({ disabled: true }),
-    "button-box-disabled-left": HELPER.toolbarButton({ disabled: true, where: "left" }),
-    "button-box-disabled-middle": HELPER.toolbarButton({ disabled: true, where: "middle" }),
-    "button-box-disabled-right": HELPER.toolbarButton({ disabled: true, where: "right" }),
+    "button-box-disabled-left": HELPER.toolbarButton({
+      disabled: true,
+      where: "left"
+    }),
+    "button-box-disabled-middle": HELPER.toolbarButton({
+      disabled: true,
+      where: "middle"
+    }),
+    "button-box-disabled-right": HELPER.toolbarButton({
+      disabled: true,
+      where: "right"
+    }),
     "button-box-pressed": HELPER.toolbarButton({ pressed: true }),
     "button-box-invalid": HELPER.toolbarButton({ invalid: true }),
-    "button-box-pressed-invalid": HELPER.toolbarButton({ pressed: true, invalid: true }),
+    "button-box-pressed-invalid": HELPER.toolbarButton({
+      pressed: true,
+      invalid: true
+    }),
     "button-box-right": HELPER.toolbarButton({ where: "right" }),
-    "button-box-pressed-right": HELPER.toolbarButton({ where: "right", pressed: true }),
+    "button-box-pressed-right": HELPER.toolbarButton({
+      where: "right",
+      pressed: true
+    }),
     "button-box-middle": HELPER.toolbarButton({ where: "middle" }),
-    "button-box-pressed-middle": HELPER.toolbarButton({ where: "middle", pressed: true }),
+    "button-box-pressed-middle": HELPER.toolbarButton({
+      where: "middle",
+      pressed: true
+    }),
     "button-box-left": HELPER.toolbarButton({ where: "left" }),
-    "button-box-pressed-left": HELPER.toolbarButton({ where: "left", pressed: true }),
+    "button-box-pressed-left": HELPER.toolbarButton({
+      where: "left",
+      pressed: true
+    }),
 
     /*
       ---------------------------------------------------------------------------
@@ -495,13 +523,13 @@ qx.Theme.define("zx.ui.theme.avocado.Decoration", {
         SCROLL BAR
       ---------------------------------------------------------------------------
       */
-     "scrollbar": {
+    scrollbar: {
       style: {
         width: 1,
         radius: 10,
         color: "transparent"
       }
-     },
+    },
 
     /*
       ---------------------------------------------------------------------------
@@ -867,7 +895,6 @@ qx.Theme.define("zx.ui.theme.avocado.Decoration", {
       }
     },
 
-
     /*
       ---------------------------------------------------------------------------
         TABLE
@@ -1111,6 +1138,6 @@ qx.Theme.define("zx.ui.theme.avocado.Decoration", {
     "slider-focused": HELPER.slider("focused"),
     "slider-invalid": HELPER.slider("invalid"),
     "slider-knob": HELPER.sliderKnob(),
-    "slider-knob-disabled": HELPER.sliderKnob("disabled"),
+    "slider-knob-disabled": HELPER.sliderKnob("disabled")
   }
 });
