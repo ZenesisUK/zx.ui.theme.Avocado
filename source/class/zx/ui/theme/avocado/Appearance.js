@@ -270,7 +270,9 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
         return {
           backgroundColor: "surface",
           textColor: "text-primary-on-surface",
-          font: "default"
+          font: "default",
+          blockerColor: "black",
+          blockerOpacity: 0.2
         };
       }
     },
