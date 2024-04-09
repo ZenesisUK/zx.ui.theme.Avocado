@@ -27,7 +27,7 @@
  * List
  *
  *
- * @asset(qxl/widgetbrowser/people.json)
+ * @asset(zx/ui/theme/avocado/people.json)
  */
 
 qx.Class.define("zx.ui.theme.avocado.demo.pages.List", {
@@ -38,7 +38,7 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.List", {
 
     this.__grid = new qx.ui.container.Composite(new qx.ui.layout.Grid(10));
     this.__listUrl = qx.util.ResourceManager.getInstance().toUri(
-      "qxl/widgetbrowser/people.json"
+      "zx/ui/theme/avocado/people.json"
     );
     this.add(this.__grid);
 
