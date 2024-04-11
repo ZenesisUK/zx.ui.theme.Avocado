@@ -2873,33 +2873,57 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
       }
     },
 
-    "colorselector/preset-field-set": "groupbox",
-    "colorselector/input-field-set": {
-      include: "groupbox",
-      style() {
-        return { paddingTop: 12 };
-      }
-    },
-
-    "colorselector/preview-field-set": {
-      include: "groupbox",
-      style() {
-        return { paddingTop: 12 };
-      }
-    },
+    "colorselector/preset-field-set": "groupbox",    
+    "colorselector/input-field-set": "groupbox",
+    "colorselector/preview-field-set": "groupbox",
 
     "colorselector/hex-field-composite": "widget",
     "colorselector/hex-field": "textfield",
 
+    "colorselector/spinner" : "spinner",
+
+    "colorselector/spinner/textfield": {
+      include: "spinner/textfield",
+
+      style(states) {
+        return {
+          minWidth: 40
+        };
+      }
+    },
+
+    "colorselector/spinner/upbutton": {
+      "include": "spinner/upbutton",
+      "alias": "spinner/upbutton",
+
+      style(states) {
+        return {
+          width: 20
+        };
+      }
+
+    },
+    "colorselector/spinner/downbutton": {
+      "include": "spinner/downbutton",
+      "alias": "spinner/downbutton",
+
+      style(states) {
+        return {
+          width: 20
+        };
+      }
+
+    },
+
     "colorselector/rgb-spinner-composite": "widget",
-    "colorselector/rgb-spinner-red": "spinner",
-    "colorselector/rgb-spinner-green": "spinner",
-    "colorselector/rgb-spinner-blue": "spinner",
+    "colorselector/rgb-spinner-red": "colorselector/spinner",
+    "colorselector/rgb-spinner-green": "colorselector/spinner",
+    "colorselector/rgb-spinner-blue": "colorselector/spinner",
 
     "colorselector/hsb-spinner-composite": "widget",
-    "colorselector/hsb-spinner-hue": "spinner",
-    "colorselector/hsb-spinner-saturation": "spinner",
-    "colorselector/hsb-spinner-brightness": "spinner",
+    "colorselector/hsb-spinner-hue": "colorselector/spinner",
+    "colorselector/hsb-spinner-saturation": "colorselector/spinner",
+    "colorselector/hsb-spinner-brightness": "colorselector/spinner",
 
     "colorselector/preview-content-old": {
       style(states) {

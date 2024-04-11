@@ -16,7 +16,9 @@
  *    Will Johnson (@WillsterJohnsonAtZenesis)
  *
  * ************************************************************************ */
-
+ /* 
+  * @asset(qx/decoration/Simple/*)
+  */
 const SCROLLBAR_RADIUS = 1e5;
 const RADIUS = 10;
 const GROUP_ROUNDED_EDGES = 3;
@@ -144,6 +146,9 @@ const HELPER = {
 };
 
 qx.Theme.define("zx.ui.theme.avocado.Decoration", {
+  aliases: {
+    decoration: "qx/decoration/Simple"
+  },
   decorations: {
     "table-filter-button-hovered": {
       decorator: [qx.ui.decoration.MSingleBorder],
