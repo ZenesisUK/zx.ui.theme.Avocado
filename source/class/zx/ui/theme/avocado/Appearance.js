@@ -486,6 +486,7 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
     },
 
     "menubutton/label": "button/label",
+    "menubutton/icon": "button/icon",
 
     /*
     ---------------------------------------------------------------------------
