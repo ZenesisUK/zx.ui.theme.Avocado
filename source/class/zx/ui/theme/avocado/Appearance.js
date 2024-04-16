@@ -248,14 +248,10 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
     //IMAGE
     image: {
       style(states) {
-        var textColor = "widget";
-        if (states.disabled) {
-          textColor = "widget-disabled";
-        } else if (states.hovered) {
-          textColor = "widget-hovered";
-        }
         return {
-          textColor: textColor,
+          textColor: states.disabled
+            ? "text-disabled-on-surface"
+            : "text-on-surface",
           opacity: !states.replacement && states.disabled ? 0.3 : undefined
         };
       }
