@@ -109,8 +109,8 @@ qx.Theme.define("zx.ui.theme.avocado.ColorGreen", {
     "table-row-background-even": "transparent",
     "table-row-background-odd": "transparent",
 
-    "table-header": "box",
-    "text-on-table-header": "text-on-surface",
+    "table-header": "#999999",
+    "text-on-table-header": "white",
     "table-header-border": "widget",
     "table-header-cell": "widget",
     "table-header-cell-hover": [255, 255, 255],
