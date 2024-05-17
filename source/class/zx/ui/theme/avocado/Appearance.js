@@ -1929,10 +1929,10 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
         }
 
         let backgroundColor = "widget";
-        if (states.selected) {
-          backgroundColor += "-selected";
-        } else if (states.disabled) {
+        if (states.disabled || states.readonly) {
           backgroundColor += "-disabled";
+        } else if (states.selected) {
+          backgroundColor += "-selected";
         }
 
         return {
@@ -1947,15 +1947,19 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
     "listitem/label": {
       style(states) {
         let backgroundColor = "widget";
-        if (states.selected) {
-          backgroundColor += "-selected";
-        } else if (states.disabled) {
+        if (states.disabled || states.readonly) {
           backgroundColor += "-disabled";
+        } else if (states.selected) {
+          backgroundColor += "-selected";
         }
 
-        return {
+        let style = {
           textColor: "text-on-" + backgroundColor
         };
+        if (states.readonly || states.disabled) {
+          style.font = "italic";
+        }
+        return style;
       }
     },
     "listitem/icon": "listitem/label",
@@ -2870,14 +2874,14 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
       }
     },
 
-    "colorselector/preset-field-set": "groupbox",    
+    "colorselector/preset-field-set": "groupbox",
     "colorselector/input-field-set": "groupbox",
     "colorselector/preview-field-set": "groupbox",
 
     "colorselector/hex-field-composite": "widget",
     "colorselector/hex-field": "textfield",
 
-    "colorselector/spinner" : "spinner",
+    "colorselector/spinner": "spinner",
 
     "colorselector/spinner/textfield": {
       include: "spinner/textfield",
@@ -2890,26 +2894,24 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
     },
 
     "colorselector/spinner/upbutton": {
-      "include": "spinner/upbutton",
-      "alias": "spinner/upbutton",
+      include: "spinner/upbutton",
+      alias: "spinner/upbutton",
 
       style(states) {
         return {
           width: 20
         };
       }
-
     },
     "colorselector/spinner/downbutton": {
-      "include": "spinner/downbutton",
-      "alias": "spinner/downbutton",
+      include: "spinner/downbutton",
+      alias: "spinner/downbutton",
 
       style(states) {
         return {
           width: 20
         };
       }
-
     },
 
     "colorselector/rgb-spinner-composite": "widget",
