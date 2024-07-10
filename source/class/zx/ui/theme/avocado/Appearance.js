@@ -1929,11 +1929,11 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
         }
 
         let backgroundColor = "widget";
-        if (states.disabled || states.readonly) {
-          backgroundColor += "-disabled";
-        } else if (states.selected) {
+        if (states.selected) {
           backgroundColor += "-selected";
-        }
+        } else if (states.disabled || states.readonly) {
+          backgroundColor += "-disabled";
+        }  
 
         return {
           padding: padding,
