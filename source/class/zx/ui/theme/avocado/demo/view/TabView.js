@@ -40,41 +40,25 @@ qx.Class.define("zx.ui.theme.avocado.demo.view.TabView", {
         focused: true,
         invalid: true
       };
-      var form = new zx.ui.theme.avocado.demo.view.TabPage(
-        "Form",
-        classname,
-        controls
-      );
+      var form = new zx.ui.theme.avocado.demo.view.TabPage("Form", classname, controls);
       this.add(form);
 
       // Tree
       classname = "zx.ui.theme.avocado.demo.pages.Tree";
       controls = { disabled: true };
-      var tree = new zx.ui.theme.avocado.demo.view.TabPage(
-        "Tree",
-        classname,
-        controls
-      );
+      var tree = new zx.ui.theme.avocado.demo.view.TabPage("Tree", classname, controls);
       this.add(tree);
 
       // List
       classname = "zx.ui.theme.avocado.demo.pages.List";
       controls = { disabled: true };
-      var list = new zx.ui.theme.avocado.demo.view.TabPage(
-        "List",
-        classname,
-        controls
-      );
+      var list = new zx.ui.theme.avocado.demo.view.TabPage("List", classname, controls);
       this.add(list);
 
       // Table
       classname = "zx.ui.theme.avocado.demo.pages.Table";
       controls = { disabled: true };
-      var table = new zx.ui.theme.avocado.demo.view.TabPage(
-        "Table",
-        classname,
-        controls
-      );
+      var table = new zx.ui.theme.avocado.demo.view.TabPage("Table", classname, controls);
       this.add(table);
 
       // Menu
@@ -85,22 +69,14 @@ qx.Class.define("zx.ui.theme.avocado.demo.view.TabView", {
         selected: true,
         hidesome: true
       };
-      var menu = new zx.ui.theme.avocado.demo.view.TabPage(
-        "Toolbar/Menu",
-        classname,
-        controls
-      );
+      var menu = new zx.ui.theme.avocado.demo.view.TabPage("Toolbar/Menu", classname, controls);
       this.add(menu);
       this.setSelection([menu]);
 
       // Window
       classname = "zx.ui.theme.avocado.demo.pages.Window";
       controls = { disabled: true };
-      var win = new zx.ui.theme.avocado.demo.view.TabPage(
-        "Window",
-        classname,
-        controls
-      );
+      var win = new zx.ui.theme.avocado.demo.view.TabPage("Window", classname, controls);
       this.add(win);
 
       // Tab
@@ -112,51 +88,31 @@ qx.Class.define("zx.ui.theme.avocado.demo.view.TabView", {
       // Control
       classname = "zx.ui.theme.avocado.demo.pages.Control";
       controls = { disabled: true };
-      var control = new zx.ui.theme.avocado.demo.view.TabPage(
-        "Control",
-        classname,
-        controls
-      );
+      var control = new zx.ui.theme.avocado.demo.view.TabPage("Control", classname, controls);
       this.add(control);
 
       // Embed
       classname = "zx.ui.theme.avocado.demo.pages.Embed";
       controls = {};
-      var embed = new zx.ui.theme.avocado.demo.view.TabPage(
-        "Embed",
-        classname,
-        controls
-      );
+      var embed = new zx.ui.theme.avocado.demo.view.TabPage("Embed", classname, controls);
       this.add(embed);
 
       // EmbedFrame
       classname = "zx.ui.theme.avocado.demo.pages.EmbedFrame";
       controls = {};
-      var embedFrame = new zx.ui.theme.avocado.demo.view.TabPage(
-        "EmbedFrame",
-        classname,
-        controls
-      );
+      var embedFrame = new zx.ui.theme.avocado.demo.view.TabPage("EmbedFrame", classname, controls);
       this.add(embedFrame);
 
       // Basic
       classname = "zx.ui.theme.avocado.demo.pages.Basic";
       controls = { disabled: true };
-      var basic = new zx.ui.theme.avocado.demo.view.TabPage(
-        "Basic",
-        classname,
-        controls
-      );
+      var basic = new zx.ui.theme.avocado.demo.view.TabPage("Basic", classname, controls);
       this.add(basic);
 
       // Misc
       classname = "zx.ui.theme.avocado.demo.pages.Misc";
       controls = { disabled: true };
-      var misc = new zx.ui.theme.avocado.demo.view.TabPage(
-        "Misc",
-        classname,
-        controls
-      );
+      var misc = new zx.ui.theme.avocado.demo.view.TabPage("Misc", classname, controls);
       this.add(misc);
     },
 
@@ -165,15 +121,11 @@ qx.Class.define("zx.ui.theme.avocado.demo.view.TabView", {
     },
 
     __setCurrentTab() {
-      var cookie =
-        qx.bom.Cookie.get("currentTab") ||
-        qx.bom.Cookie.set("currentTab", "basic");
+      var cookie = qx.bom.Cookie.get("currentTab") || qx.bom.Cookie.set("currentTab", "basic");
 
-      var currentTab = new qx.type.Array()
-        .append(this.getSelectables())
-        .filter(function (tab) {
-          return tab.getLabel() == cookie;
-        })[0];
+      var currentTab = new qx.type.Array().append(this.getSelectables()).filter(function (tab) {
+        return tab.getLabel() == cookie;
+      })[0];
 
       if (currentTab) {
         this.setSelection([currentTab]);

@@ -27,7 +27,7 @@
  */
 qx.Theme.define("zx.ui.theme.avocado.Font", {
   fonts: {
-   heavy: {
+    heavy: {
       size: 13,
       family: ["AvenirBlack"],
       fontName: "AvenirBlack"
@@ -110,6 +110,5 @@ qx.Theme.define("zx.ui.theme.avocado.Font", {
       color: "text-primary-on-surface",
       fontName: "Avenir"
     }
-
   }
 });

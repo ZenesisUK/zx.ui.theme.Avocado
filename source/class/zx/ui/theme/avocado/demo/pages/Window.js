@@ -45,11 +45,11 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Window", {
 
     var decorator = new qx.ui.decoration.Decorator().set({
       width: 10,
-      color: "#ddd",
+      color: "#ddd"
     });
 
     this.__desktop = new qx.ui.window.Desktop().set({
-      decorator: decorator,
+      decorator: decorator
     });
 
     this.add(this.__desktop, { edge: 0, top: 0 });
@@ -84,10 +84,7 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Window", {
 
     __createWindow1() {
       // Create the Window
-      var win = new qx.ui.window.Window(
-        "First Window",
-        "icon/16/apps/office-calendar.png"
-      );
+      var win = new qx.ui.window.Window("First Window", "icon/16/apps/office-calendar.png");
       win.setLayout(new qx.ui.layout.VBox(10));
       win.setShowStatusbar(true);
       win.setStatus("Demo loaded");
@@ -105,18 +102,13 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Window", {
       win.addListener(
         "resize",
         function (e) {
-          this.debug(
-            "Resized to: " + e.getData().width + "x" + e.getData().height
-          );
+          this.debug("Resized to: " + e.getData().width + "x" + e.getData().height);
         },
         this
       );
 
       // Add an Atom
-      var atom = new qx.ui.basic.Atom(
-        "Welcome to your first own Window.<br/>Have fun!",
-        "icon/32/apps/office-address-book.png"
-      );
+      var atom = new qx.ui.basic.Atom("Welcome to your first own Window.<br/>Have fun!", "icon/32/apps/office-address-book.png");
       atom.setRich(true);
       win.add(atom);
 
@@ -137,17 +129,11 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Window", {
     },
 
     __createWindow2() {
-      var win = new qx.ui.window.Window(
-        "Second Window",
-        "icon/16/apps/internet-feed-reader.png"
-      );
+      var win = new qx.ui.window.Window("Second Window", "icon/16/apps/internet-feed-reader.png");
       win.setLayout(new qx.ui.layout.VBox(10));
       win.setStatus("Application is ready");
 
-      var atom = new qx.ui.basic.Atom(
-        "The second window",
-        "icon/22/apps/utilities-calculator.png"
-      );
+      var atom = new qx.ui.basic.Atom("The second window", "icon/22/apps/utilities-calculator.png");
       win.add(atom);
 
       var box = new qx.ui.container.Composite();
@@ -222,14 +208,10 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Window", {
       for (var i = 0; i < edges.length; i++) {
         var edge = edges[i];
         var resizable = new qx.ui.form.CheckBox("Resizable " + edge).set({
-          value: true,
+          value: true
         });
 
-        resizable.bind(
-          "value",
-          win,
-          "resizable" + qx.lang.String.firstUp(edge)
-        );
+        resizable.bind("value", win, "resizable" + qx.lang.String.firstUp(edge));
         resize.add(resizable);
       }
 
@@ -254,10 +236,7 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Window", {
     },
 
     __createWindow3() {
-      var win = new qx.ui.window.Window(
-        "Third Window",
-        "icon/16/apps/internet-telephony.png"
-      );
+      var win = new qx.ui.window.Window("Third Window", "icon/16/apps/internet-telephony.png");
       win.setLayout(new qx.ui.layout.VBox());
       win.setMinWidth(200);
       win.setMaxWidth(450);
@@ -267,10 +246,7 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Window", {
       var wm1 = this.__getModalWindow1();
       this._widgets.push(wm1);
 
-      var btn1 = new qx.ui.form.Button(
-        "Open Modal Dialog 1",
-        "icon/16/apps/office-calendar.png"
-      );
+      var btn1 = new qx.ui.form.Button("Open Modal Dialog 1", "icon/16/apps/office-calendar.png");
       btn1.addListener("execute", wm1.open, wm1);
       win.add(btn1);
 
@@ -287,10 +263,7 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Window", {
       var wm2 = this.__getModalWindow2();
       this._widgets.push(wm2);
 
-      var btn2 = new qx.ui.form.Button(
-        "Open Modal Dialog 2",
-        "icon/16/apps/office-calendar.png"
-      );
+      var btn2 = new qx.ui.form.Button("Open Modal Dialog 2", "icon/16/apps/office-calendar.png");
       btn2.addListener("execute", wm2.open, wm2);
       wm1.add(btn2);
 
@@ -319,10 +292,7 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Window", {
       wm2.moveTo(300, 300);
       this.__desktop.add(wm2);
 
-      var warn1 = new qx.ui.basic.Atom(
-        "Do you want to fly to Berlin?",
-        "icon/32/status/dialog-error.png"
-      );
+      var warn1 = new qx.ui.basic.Atom("Do you want to fly to Berlin?", "icon/32/status/dialog-error.png");
       wm2.add(warn1);
 
       var box = new qx.ui.container.Composite();
@@ -335,10 +305,7 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Window", {
       });
       box.add(btn3);
 
-      var btn4 = new qx.ui.form.Button(
-        "No",
-        "icon/16/actions/dialog-cancel.png"
-      );
+      var btn4 = new qx.ui.form.Button("No", "icon/16/actions/dialog-cancel.png");
       btn4.addListener("execute", function (e) {
         /* eslint-disable-next-line no-alert */
         alert("Sorry, please tap 'Yes'!");
@@ -346,6 +313,6 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Window", {
       box.add(btn4);
 
       return wm2;
-    },
-  },
+    }
+  }
 });

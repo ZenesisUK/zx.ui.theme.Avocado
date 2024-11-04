@@ -95,9 +95,7 @@ qx.Mixin.define("zx.ui.theme.avocado.demo.MControls", {
         toggleInvalid.addListener("changeValue", function (e) {
           widgets.forEach(function (widget, index) {
             if (widget.setInvalidMessage && widget.setValid) {
-              widget.setInvalidMessage(
-                "This is invalid message number " + index + "."
-              );
+              widget.setInvalidMessage("This is invalid message number " + index + ".");
               widget.setValid(!this.getValue());
             }
           }, this);
@@ -126,6 +124,6 @@ qx.Mixin.define("zx.ui.theme.avocado.demo.MControls", {
         });
         controls.add(tb);
       }
-    },
-  },
+    }
+  }
 });

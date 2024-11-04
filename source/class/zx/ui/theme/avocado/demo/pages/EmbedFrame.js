@@ -46,9 +46,7 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.EmbedFrame", {
       var label;
       var left;
       var right;
-      var url = qx.util.ResourceManager.getInstance().toUri(
-        "qxl/widgetbrowser/blank.html"
-      );
+      var url = qx.util.ResourceManager.getInstance().toUri("qxl/widgetbrowser/blank.html");
 
       var splitPane = new qx.ui.splitpane.Pane("horizontal");
       // remove the background color for a better look
@@ -61,7 +59,7 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.EmbedFrame", {
       var iFrame = new qx.ui.embed.Iframe().set({
         source: url,
         width: 300,
-        height: 200,
+        height: 200
       });
 
       widgets.push(iFrame);
@@ -75,7 +73,7 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.EmbedFrame", {
       var themedIFrame = new qx.ui.embed.ThemedIframe().set({
         source: url,
         width: 300,
-        height: 200,
+        height: 200
       });
 
       widgets.push(themedIFrame);
@@ -84,6 +82,6 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.EmbedFrame", {
 
       splitPane.add(left);
       splitPane.add(right);
-    },
-  },
+    }
+  }
 });

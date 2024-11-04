@@ -36,9 +36,7 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Basic", {
   construct() {
     super();
 
-    var hbox = (this.__hbox = new qx.ui.container.Composite(
-      new qx.ui.layout.HBox(10)
-    ));
+    var hbox = (this.__hbox = new qx.ui.container.Composite(new qx.ui.layout.HBox(10)));
     this.add(hbox, { top: 0 });
 
     this.initWidgets();
@@ -56,20 +54,14 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Basic", {
       this.__hbox.add(label);
 
       // Image
-      var image = new qx.ui.basic.Atom(
-        "Image",
-        "icon/32/status/dialog-information.png"
-      );
+      var image = new qx.ui.basic.Atom("Image", "icon/32/status/dialog-information.png");
       widgets.push(image);
       this.__hbox.add(image);
 
       // Atom
-      var atom = new qx.ui.basic.Atom(
-        "Atom",
-        "icon/32/status/dialog-information.png"
-      );
+      var atom = new qx.ui.basic.Atom("Atom", "icon/32/status/dialog-information.png");
       widgets.push(atom);
       this.__hbox.add(atom);
-    },
-  },
+    }
+  }
 });

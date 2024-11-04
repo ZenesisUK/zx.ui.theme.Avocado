@@ -73,25 +73,15 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Table", {
 
       table.set({
         width: 600,
-        height: 400,
+        height: 400
       });
 
-      table
-        .getSelectionModel()
-        .setSelectionMode(
-          qx.ui.table.selection.Model.MULTIPLE_INTERVAL_SELECTION
-        );
+      table.getSelectionModel().setSelectionMode(qx.ui.table.selection.Model.MULTIPLE_INTERVAL_SELECTION);
 
       var tcm = table.getTableColumnModel();
 
       tcm.setDataCellRenderer(3, new qx.ui.table.cellrenderer.Boolean());
-      tcm.setHeaderCellRenderer(
-        2,
-        new qx.ui.table.headerrenderer.Icon(
-          "icon/16/apps/office-calendar.png",
-          "A date"
-        )
-      );
+      tcm.setHeaderCellRenderer(2, new qx.ui.table.headerrenderer.Icon("icon/16/apps/office-calendar.png", "A date"));
 
       return table;
     },
@@ -102,14 +92,9 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Table", {
       var dateRange = 400 * 24 * 60 * 60 * 1000; // 400 days
       for (var row = 0; row < rowCount; row++) {
         var date = new Date(now + Math.random() * dateRange - dateRange / 2);
-        rowData.push([
-          this.__nextId++,
-          Math.random() * 10000,
-          date,
-          Math.random() > 0.5,
-        ]);
+        rowData.push([this.__nextId++, Math.random() * 10000, date, Math.random() > 0.5]);
       }
       return rowData;
-    },
-  },
+    }
+  }
 });

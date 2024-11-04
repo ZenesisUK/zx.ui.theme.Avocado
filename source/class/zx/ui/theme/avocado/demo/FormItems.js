@@ -17,19 +17,19 @@
 ************************************************************************ */
 
 qx.Class.define("zx.ui.theme.avocado.demo.FormItems", {
-  extend : qx.ui.container.Composite,
+  extend: qx.ui.container.Composite,
 
-  construct : function() {
+  construct: function () {
     this.base(arguments);
 
     this.__widgets = [];
     this._createView();
   },
 
-  members : {
-    __widgets : null,
+  members: {
+    __widgets: null,
 
-    _createView : function() {
+    _createView: function () {
       var grid = new qx.ui.layout.Grid(20, 5);
       grid.setColumnFlex(0, 1);
       grid.setColumnFlex(1, 1);
@@ -45,7 +45,7 @@ qx.Class.define("zx.ui.theme.avocado.demo.FormItems", {
 
       var textGroupBox = new qx.ui.groupbox.GroupBox("Text");
       textGroupBox.setLayout(new qx.ui.layout.Canvas());
-      this.add(textGroupBox, {row: 0, column: 0});
+      this.add(textGroupBox, { row: 0, column: 0 });
 
       // text field
       var textField = new qx.ui.form.TextField();
@@ -104,7 +104,7 @@ qx.Class.define("zx.ui.theme.avocado.demo.FormItems", {
 
       var selectionGroupBox = new qx.ui.groupbox.GroupBox("Selection");
       selectionGroupBox.setLayout(new qx.ui.layout.Canvas());
-      this.add(selectionGroupBox, {row:1, column: 0, rowSpan: 2});
+      this.add(selectionGroupBox, { row: 1, column: 0, rowSpan: 2 });
 
       // select box
       var selectBox = new qx.ui.form.SelectBox();
@@ -131,9 +131,9 @@ qx.Class.define("zx.ui.theme.avocado.demo.FormItems", {
 
       // radio button group
       var radioButtonGroup = new qx.ui.form.RadioButtonGroup();
-      radioButtonGroup.add(new qx.ui.form.RadioButton("RadioButton 1").set({tabIndex: tabIndex++}));
-      radioButtonGroup.add(new qx.ui.form.RadioButton("RadioButton 2").set({tabIndex: tabIndex++}));
-      radioButtonGroup.add(new qx.ui.form.RadioButton("RadioButton 3").set({tabIndex: tabIndex++}));
+      radioButtonGroup.add(new qx.ui.form.RadioButton("RadioButton 1").set({ tabIndex: tabIndex++ }));
+      radioButtonGroup.add(new qx.ui.form.RadioButton("RadioButton 2").set({ tabIndex: tabIndex++ }));
+      radioButtonGroup.add(new qx.ui.form.RadioButton("RadioButton 3").set({ tabIndex: tabIndex++ }));
       form.add(radioButtonGroup, "RadioButtonGroup");
       this.__widgets.push(radioButtonGroup);
 
@@ -148,50 +148,50 @@ qx.Class.define("zx.ui.theme.avocado.demo.FormItems", {
       var layout = new qx.ui.layout.Grid(8, 8);
       buttonGroupBox.setLayout(layout);
       layout.setColumnAlign(0, "right", "middle");
-      this.add(buttonGroupBox, {row: 0, column: 1});
+      this.add(buttonGroupBox, { row: 0, column: 1 });
 
       // button
-      var button = new qx.ui.form.Button("Button").set({tabIndex: tabIndex++});
+      var button = new qx.ui.form.Button("Button").set({ tabIndex: tabIndex++ });
       var label = new qx.ui.basic.Label("Button :");
       label.setBuddy(button);
-      buttonGroupBox.add(label, {row: 0, column: 0});
-      buttonGroupBox.add(button, {row: 0, column: 1});
+      buttonGroupBox.add(label, { row: 0, column: 0 });
+      buttonGroupBox.add(button, { row: 0, column: 1 });
       this.__widgets.push(button);
 
       // toggle button
-      var toggleButton = new qx.ui.form.ToggleButton("ToggleButton").set({tabIndex: tabIndex++});
+      var toggleButton = new qx.ui.form.ToggleButton("ToggleButton").set({ tabIndex: tabIndex++ });
       label = new qx.ui.basic.Label("ToggleButton :");
       label.setBuddy(toggleButton);
-      buttonGroupBox.add(label, {row: 1, column: 0});
-      buttonGroupBox.add(toggleButton, {row: 1, column: 1});
+      buttonGroupBox.add(label, { row: 1, column: 0 });
+      buttonGroupBox.add(toggleButton, { row: 1, column: 1 });
       this.__widgets.push(toggleButton);
 
       // toggle button
-      var repeatButton = new qx.ui.form.RepeatButton("0").set({tabIndex: tabIndex++});
+      var repeatButton = new qx.ui.form.RepeatButton("0").set({ tabIndex: tabIndex++ });
       label = new qx.ui.basic.Label("RepeatButton :");
       label.setBuddy(repeatButton);
-      buttonGroupBox.add(label, {row: 2, column: 0});
-      buttonGroupBox.add(repeatButton, {row: 2, column: 1});
+      buttonGroupBox.add(label, { row: 2, column: 0 });
+      buttonGroupBox.add(repeatButton, { row: 2, column: 1 });
       this.__widgets.push(repeatButton);
 
       // menu button
-      var menuButton = new qx.ui.form.MenuButton("MenuButton", null, this.__createMenuForMenuButton()).set({tabIndex: tabIndex++});
+      var menuButton = new qx.ui.form.MenuButton("MenuButton", null, this.__createMenuForMenuButton()).set({ tabIndex: tabIndex++ });
       label = new qx.ui.basic.Label("MenuButton :");
       label.setBuddy(menuButton);
-      buttonGroupBox.add(label, {row: 3, column: 0});
-      buttonGroupBox.add(menuButton, {row: 3, column: 1});
+      buttonGroupBox.add(label, { row: 3, column: 0 });
+      buttonGroupBox.add(menuButton, { row: 3, column: 1 });
       this.__widgets.push(menuButton);
 
       // split button
-      var splitButton = new qx.ui.form.SplitButton("SplitButton", null, this.__createMenuForSplitButton()).set({tabIndex: tabIndex++});
+      var splitButton = new qx.ui.form.SplitButton("SplitButton", null, this.__createMenuForSplitButton()).set({ tabIndex: tabIndex++ });
       label = new qx.ui.basic.Label("SplitButton :");
       label.setBuddy(splitButton);
-      buttonGroupBox.add(label, {row: 4, column: 0});
-      buttonGroupBox.add(splitButton, {row: 4, column: 1});
+      buttonGroupBox.add(label, { row: 4, column: 0 });
+      buttonGroupBox.add(splitButton, { row: 4, column: 1 });
       this.__widgets.push(splitButton);
 
       // Listener
-      repeatButton.addListener("execute", function() {
+      repeatButton.addListener("execute", function () {
         var tempValue = parseInt(repeatButton.getLabel(), 10) + 1;
         repeatButton.setLabel(tempValue.toString());
       });
@@ -204,10 +204,10 @@ qx.Class.define("zx.ui.theme.avocado.demo.FormItems", {
 
       var booleanGroupBox = new qx.ui.groupbox.GroupBox("Boolean");
       booleanGroupBox.setLayout(new qx.ui.layout.Canvas());
-      this.add(booleanGroupBox, {row:1, column: 1});
+      this.add(booleanGroupBox, { row: 1, column: 1 });
 
       // check box
-      var checkBox = new qx.ui.form.CheckBox().set({tabIndex: tabIndex++});
+      var checkBox = new qx.ui.form.CheckBox().set({ tabIndex: tabIndex++ });
       form.add(checkBox, "CheckBox");
       this.__widgets.push(checkBox);
 
@@ -221,7 +221,7 @@ qx.Class.define("zx.ui.theme.avocado.demo.FormItems", {
       this.__widgets.push(triCheckBox);
 
       // radio button
-      var radioButton = new qx.ui.form.RadioButton().set({tabIndex: tabIndex++});
+      var radioButton = new qx.ui.form.RadioButton().set({ tabIndex: tabIndex++ });
       form.add(radioButton, "RadioButton");
       this.__widgets.push(radioButton);
 
@@ -236,15 +236,15 @@ qx.Class.define("zx.ui.theme.avocado.demo.FormItems", {
 
       var numberGroupBox = new qx.ui.groupbox.GroupBox("Number");
       numberGroupBox.setLayout(new qx.ui.layout.Canvas());
-      this.add(numberGroupBox, {row: 2, column: 1});
+      this.add(numberGroupBox, { row: 2, column: 1 });
 
       // spinner
-      var spinner = new qx.ui.form.Spinner(0, 50, 100).set({tabIndex: tabIndex++});
+      var spinner = new qx.ui.form.Spinner(0, 50, 100).set({ tabIndex: tabIndex++ });
       form.add(spinner, "Spinner");
       this.__widgets.push(spinner);
 
       // slider
-      var slider = new qx.ui.form.Slider().set({tabIndex: tabIndex++});
+      var slider = new qx.ui.form.Slider().set({ tabIndex: tabIndex++ });
       slider.setWidth(130);
       form.add(slider, "Slider");
       this.__widgets.push(slider);
@@ -256,26 +256,23 @@ qx.Class.define("zx.ui.theme.avocado.demo.FormItems", {
       numberGroupBox.add(renderedForm);
     },
 
-
-    __createItems: function(widget) {
+    __createItems: function (widget) {
       for (var i = 0; i < 10; i++) {
         var tempItem = new qx.ui.form.ListItem("Item " + i);
         widget.add(tempItem);
       }
     },
 
-
-    __createItemsVirtual: function(widget) {
+    __createItemsVirtual: function (widget) {
       // Creates the model data
       var model = new qx.data.Array();
       for (var i = 0; i < 300; i++) {
-        model.push("Item " + (i));
+        model.push("Item " + i);
       }
       widget.setModel(model);
     },
 
-
-    __createMenuForMenuButton : function() {
+    __createMenuForMenuButton: function () {
       // Creates the option menu
       var optionMenu = new qx.ui.menu.Menu();
 
@@ -301,8 +298,7 @@ qx.Class.define("zx.ui.theme.avocado.demo.FormItems", {
       return menu;
     },
 
-
-    __createMenuForSplitButton : function() {
+    __createMenuForSplitButton: function () {
       var menu = new qx.ui.menu.Menu();
 
       var site1 = new qx.ui.menu.Button("Website 1");
@@ -316,8 +312,7 @@ qx.Class.define("zx.ui.theme.avocado.demo.FormItems", {
       return menu;
     },
 
-
-    getWidgets : function() {
+    getWidgets: function () {
       return this.__widgets;
     }
   }

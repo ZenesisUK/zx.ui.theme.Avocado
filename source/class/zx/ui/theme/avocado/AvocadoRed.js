@@ -17,7 +17,6 @@
  *
  * ************************************************************************ */
 
-
 qx.Theme.define("zx.ui.theme.avocado.AvocadoRed", {
   title: "Avocado Red Theme",
 

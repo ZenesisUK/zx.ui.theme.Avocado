@@ -37,9 +37,7 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.List", {
     super();
 
     this.__grid = new qx.ui.container.Composite(new qx.ui.layout.Grid(10));
-    this.__listUrl = qx.util.ResourceManager.getInstance().toUri(
-      "zx/ui/theme/avocado/people.json"
-    );
+    this.__listUrl = qx.util.ResourceManager.getInstance().toUri("zx/ui/theme/avocado/people.json");
     this.add(this.__grid);
 
     this.initWidgets();
@@ -80,9 +78,7 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.List", {
       req.addListener("success", function () {
         var people = req.getResponse().people;
         people.forEach(function (person) {
-          var item = new qx.ui.form.ListItem(
-            "" + person.lastname + ", " + person.firstname
-          );
+          var item = new qx.ui.form.ListItem("" + person.lastname + ", " + person.firstname);
           item.setHeight(25);
           list.add(item);
         });
@@ -100,8 +96,8 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.List", {
         labelOptions: {
           converter(data, model) {
             return model ? model.getLastname() + ", " + data : "no model...";
-          },
-        },
+          }
+        }
       });
 
       this.__attachStore(list);
@@ -125,7 +121,7 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.List", {
         // Assign the group name for each item (fist char form last name)
         group(model) {
           return model.getLastname().charAt(0).toUpperCase();
-        },
+        }
       };
 
       list.setDelegate(delegate);
@@ -136,6 +132,6 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.List", {
     __attachStore(widget) {
       var store = new qx.data.store.Json(this.__listUrl);
       store.bind("model.people", widget, "model");
-    },
-  },
+    }
+  }
 });
