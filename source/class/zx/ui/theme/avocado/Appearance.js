@@ -583,6 +583,7 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
       }
     },
     "splitbutton/button/label": "button/label",
+    "splitbutton/button/icon": "button/icon",
 
     "splitbutton/arrow": {
       style(states) {
