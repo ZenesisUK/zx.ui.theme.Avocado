@@ -1164,7 +1164,8 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
       style(states) {
         return {
           backgroundColor: states.selected ? "primary-selected" : undefined,
-          padding: [2, 6]
+          padding: [2, 6],
+          cursor: states.disabled ? "not-allowed" : "pointer"
         };
       }
     },
@@ -2228,6 +2229,7 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
         return {
           decorator: "toolbar-separator",
           margin: [7, 0],
+          padding: [3, 5],
           width: 4
         };
       }
