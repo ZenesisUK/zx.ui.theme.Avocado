@@ -556,6 +556,8 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
     splitbutton: {},
 
     "splitbutton/button": {
+      alias: "button",
+      include: "button",
       style(states) {
         var decorator = "material-button";
 
@@ -582,7 +584,6 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
         };
       }
     },
-    "splitbutton/button/label": "button/label",
 
     "splitbutton/arrow": {
       style(states) {
@@ -1933,7 +1934,7 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
           backgroundColor += "-selected";
         } else if (states.disabled || states.readonly) {
           backgroundColor += "-disabled";
-        }  
+        }
 
         return {
           padding: padding,
