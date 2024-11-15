@@ -76,11 +76,7 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Tree", {
 
       // TreeVirtual
       label = new qx.ui.basic.Label("TreeVirtual (Legacy)");
-      label.setToolTip(
-        new qx.ui.tooltip.ToolTip(
-          "Inherits from qx.ui.table.Table. Suited for multi-column trees."
-        )
-      );
+      label.setToolTip(new qx.ui.tooltip.ToolTip("Inherits from qx.ui.table.Table. Suited for multi-column trees."));
       this.__grid.add(label, { row: 0, column: 2 });
       var treeVirtual = this.__getTreeVirtual();
       this.__grid.add(treeVirtual, { row: 1, column: 2 });
@@ -90,7 +86,7 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Tree", {
     __getTree() {
       var tree = new qx.ui.tree.Tree().set({
         width: 200,
-        height: 400,
+        height: 400
       });
 
       var root = new qx.ui.tree.TreeFolder("root");
@@ -134,7 +130,7 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Tree", {
     __getVirtualTree() {
       var tree = new qx.ui.tree.VirtualTree(null, "name", "children").set({
         width: 200,
-        height: 400,
+        height: 400
       });
 
       var url = "qxl/widgetbrowser/tree.json";
@@ -174,6 +170,6 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Tree", {
       dataModel.setData();
 
       return tree;
-    },
-  },
+    }
+  }
 });

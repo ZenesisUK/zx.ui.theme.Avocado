@@ -89,29 +89,20 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Tab", {
     },
 
     addTabPages(tabView) {
-      var page1 = new qx.ui.tabview.Page(
-        "Layout",
-        "icon/16/apps/utilities-terminal.png"
-      );
+      var page1 = new qx.ui.tabview.Page("Layout", "icon/16/apps/utilities-terminal.png");
       page1.setLayout(new qx.ui.layout.VBox());
       page1.add(new qx.ui.basic.Label("Layout-Settings…"));
       tabView.add(page1);
 
-      var page2 = new qx.ui.tabview.Page(
-        "Notes",
-        "icon/16/apps/utilities-notes.png"
-      );
+      var page2 = new qx.ui.tabview.Page("Notes", "icon/16/apps/utilities-notes.png");
       page2.setLayout(new qx.ui.layout.VBox());
       page2.add(new qx.ui.basic.Label("Notes…"));
       tabView.add(page2);
 
-      var page3 = new qx.ui.tabview.Page(
-        "Calculator",
-        "icon/16/apps/utilities-calculator.png"
-      );
+      var page3 = new qx.ui.tabview.Page("Calculator", "icon/16/apps/utilities-calculator.png");
       page3.setLayout(new qx.ui.layout.VBox());
       page3.add(new qx.ui.basic.Label("Calculator…"));
       tabView.add(page3);
-    },
-  },
+    }
+  }
 });

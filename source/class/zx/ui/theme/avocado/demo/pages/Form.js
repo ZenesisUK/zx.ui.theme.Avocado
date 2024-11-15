@@ -30,7 +30,7 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Form", {
   extend: zx.ui.theme.avocado.demo.pages.AbstractPage,
 
   statics: {
-    ITEM_SIZE: 3,
+    ITEM_SIZE: 3
   },
 
   construct() {
@@ -39,5 +39,5 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Form", {
     var formItems = new zx.ui.theme.avocado.demo.FormItems();
     this._widgets = formItems.getWidgets();
     this.add(formItems);
-  },
+  }
 });

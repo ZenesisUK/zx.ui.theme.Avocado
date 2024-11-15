@@ -33,6 +33,6 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.AbstractPage", {
 
     getWidgets() {
       return this._widgets;
-    },
-  },
+    }
+  }
 });

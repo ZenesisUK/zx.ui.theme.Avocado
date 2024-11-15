@@ -85,7 +85,6 @@ qx.Class.define("zx.ui.theme.avocado.Image", {
       folder: "@MaterialIcons/folder/15",
       file: "@MaterialIcons/insert_drive_file/15",
 
-
       // menu
       "menu-checkbox": "@MaterialIcons/check_box_outline_blank/15",
       "menu-checkbox-checked": "@MaterialIcons/check_box/15",
@@ -96,7 +95,7 @@ qx.Class.define("zx.ui.theme.avocado.Image", {
       "tabview-close": "@MaterialIcons/close/12",
 
       "user-circle": "@MaterialIcons/account_circle/18",
-      "calendar": "@MaterialIcons/calendar_month/14",
+      calendar: "@MaterialIcons/calendar_month/14"
     }
   }
 });

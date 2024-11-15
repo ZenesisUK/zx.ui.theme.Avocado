@@ -73,5 +73,5 @@ qx.Class.define("zx.ui.theme.avocado.demo.view.TabPage", {
     this.add(loading, { left: "50%", top: "50%" });
   },
 
-  members: {},
+  members: {}
 });

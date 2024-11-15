@@ -57,7 +57,7 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Control", {
       colorPopup.exclude();
 
       var openColorPopup = new qx.ui.form.Button("Open Color Popup").set({
-        maxWidth: 150,
+        maxWidth: 150
       });
       widgets.push(openColorPopup);
       this.__vbox.add(label);
@@ -73,6 +73,6 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Control", {
       widgets.push(dateChooser);
       this.__vbox.add(label);
       this.__vbox.add(dateChooser);
-    },
-  },
+    }
+  }
 });

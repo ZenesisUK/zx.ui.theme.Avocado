@@ -40,11 +40,7 @@ qx.Class.define("zx.ui.theme.avocado.demo.view.Header", {
     this.getLayout().setAlignY("middle");
 
     var title = new qx.ui.basic.Label("Widget Browser");
-    var version = new qx.ui.basic.Label(
-      "qooxdoo " +
-        (qx.core.Environment.get("qx.revision") ||
-          qx.core.Environment.get("qx.version"))
-    );
+    var version = new qx.ui.basic.Label("qooxdoo " + (qx.core.Environment.get("qx.revision") || qx.core.Environment.get("qx.version")));
     version.setFont("default");
     version.setAppearance("app-header-label");
 
@@ -57,7 +53,6 @@ qx.Class.define("zx.ui.theme.avocado.demo.view.Header", {
     //     break;
     //   }
     // }
-
 
     // Build select-box
     var hashTheme = window.location.hash.substr(1);

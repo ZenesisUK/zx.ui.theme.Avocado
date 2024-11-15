@@ -76,14 +76,14 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Misc", {
         "drive-optical.png",
         "input-keyboard.png",
         "network-wired.png",
-        "network-wireless.png",
+        "network-wireless.png"
       ];
 
       icons.forEach(function (icon) {
         slideBar.add(
           new qx.ui.basic.Image("icon/48/devices/" + icon).set({
             decorator: "main",
-            padding: 4,
+            padding: 4
           })
         );
       });
@@ -96,17 +96,15 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Misc", {
       var popup = new qx.ui.popup.Popup(new qx.ui.layout.Canvas()).set({
         offset: 3,
         offsetBottom: 20,
-        appearance: "tooltip",
+        appearance: "tooltip"
       });
 
       popup.set({
         allowStretchX: false,
-        autoHide: false,
+        autoHide: false
       });
 
-      popup.add(
-        new qx.ui.basic.Atom("Pop-Up", "icon/32/apps/media-photo-album.png")
-      );
+      popup.add(new qx.ui.basic.Atom("Pop-Up", "icon/32/apps/media-photo-album.png"));
       widgets.push(popup);
       this.__vbox.add(label);
       this.__vbox.add(popup);
@@ -117,7 +115,7 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Misc", {
       subcontainer = new qx.ui.container.Composite(new qx.ui.layout.Canvas());
       var resizer = new qx.ui.container.Resizer().set({
         resizable: false,
-        resizableRight: true,
+        resizableRight: true
       });
 
       resizer.setLayout(new qx.ui.layout.Grow());
@@ -126,7 +124,7 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Misc", {
           width: 50,
           maxWidth: 200,
           height: 50,
-          maxHeight: 200,
+          maxHeight: 200
         })
       );
 
@@ -140,7 +138,7 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Misc", {
       subcontainer = new qx.ui.container.Composite(new qx.ui.layout.HBox(10));
       subcontainer.set({
         allowStretchY: false,
-        allowStretchX: false,
+        allowStretchX: false
       });
 
       this.__vbox.add(label);
@@ -150,9 +148,7 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Misc", {
       source.setDraggable(true);
       source.setSelectionMode("multi");
       for (let i = 0; i < 10; i++) {
-        source.add(
-          new qx.ui.form.ListItem("Item " + i, "icon/16/places/folder.png")
-        );
+        source.add(new qx.ui.form.ListItem("Item " + i, "icon/16/places/folder.png"));
       }
 
       source.addListener("dragstart", function (e) {
@@ -213,6 +209,6 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Misc", {
 
       subcontainer.add(target);
       widgets.push(target);
-    },
-  },
+    }
+  }
 });

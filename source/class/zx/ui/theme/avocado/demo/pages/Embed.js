@@ -62,36 +62,24 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Embed", {
           height: 200,
           canvasWidth: 200,
           canvasHeight: 200,
-          syncDimension: true,
+          syncDimension: true
         });
 
         canvas.addListener("redraw", this.__draw, this);
         widgets.push(canvas);
         this.__grid.add(canvas, { row: 3, column: 0 });
       } else {
-        this.__grid.add(
-          new qx.ui.basic.Label("Browser does not support canvas"),
-          { row: 3, column: 0 }
-        );
+        this.__grid.add(new qx.ui.basic.Label("Browser does not support canvas"), { row: 3, column: 0 });
       }
 
       // HTML
       label = new qx.ui.basic.Label("HTML");
       this.__grid.add(label, { row: 2, column: 1 });
 
-      var htmlContainer = new qx.ui.container.Composite(
-        new qx.ui.layout.VBox(10)
-      );
+      var htmlContainer = new qx.ui.container.Composite(new qx.ui.layout.VBox(10));
       this.__grid.add(htmlContainer, { row: 3, column: 1 });
 
-      var html1 =
-        "<div style='background-color: white; text-align: center;'>" +
-        "<i style='color: red;'><b>H</b></i>" +
-        "<b>T</b>" +
-        "<u>M</u>" +
-        "<i>L</i>" +
-        " Text" +
-        "</div>";
+      var html1 = "<div style='background-color: white; text-align: center;'>" + "<i style='color: red;'><b>H</b></i>" + "<b>T</b>" + "<u>M</u>" + "<i>L</i>" + " Text" + "</div>";
       var embed1 = new qx.ui.embed.Html(html1);
       widgets.push(embed1);
       embed1.setMaxWidth(200);
@@ -131,6 +119,6 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.Embed", {
 
       ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
       ctx.fillRect(70, 70, 105, 100);
-    },
-  },
+    }
+  }
 });

@@ -16,9 +16,9 @@
  *    Will Johnson (@WillsterJohnsonAtZenesis)
  *
  * ************************************************************************ */
- /* 
-  * @asset(qx/decoration/Simple/*)
-  */
+/*
+ * @asset(qx/decoration/Simple/*)
+ */
 const SCROLLBAR_RADIUS = 1e5;
 const RADIUS = 10;
 const GROUP_ROUNDED_EDGES = 3;
@@ -30,10 +30,7 @@ const HELPER = {
   scrollBarButton(where, state) {
     let style = {
       width: 1,
-      radius:
-        where == "begin"
-          ? [0, 0, SCROLLBAR_RADIUS, SCROLLBAR_RADIUS]
-          : [SCROLLBAR_RADIUS, SCROLLBAR_RADIUS, 0, 0]
+      radius: where == "begin" ? [0, 0, SCROLLBAR_RADIUS, SCROLLBAR_RADIUS] : [SCROLLBAR_RADIUS, SCROLLBAR_RADIUS, 0, 0]
     };
     if (state == "disabled") style.backgroundColor = "primary-disabled";
     else if (state == "pressed") style.backgroundColor = "primary-selected";
@@ -67,8 +64,7 @@ const HELPER = {
     };
     if (state == "disabled") style.backgroundColor = "text-disabled-on-surface";
     else if (state == "invalid") style.color = "error";
-    else if (state == "focused")
-      style.backgroundColor = style.color = "primary-focused";
+    else if (state == "focused") style.backgroundColor = style.color = "primary-focused";
     return { style };
   },
 
@@ -270,11 +266,7 @@ qx.Theme.define("zx.ui.theme.avocado.Decoration", {
         shadowVerticalLength: [3, 2, 1],
         shadowBlurRadius: [1, 2, 5],
         shadowSpreadRadius: [-2, 0, 0],
-        shadowColor: [
-          "rgba(0, 0, 0, 0.2)",
-          "rgba(0, 0, 0, 0.14)",
-          "rgba(0, 0, 0, 0.12)"
-        ],
+        shadowColor: ["rgba(0, 0, 0, 0.2)", "rgba(0, 0, 0, 0.14)", "rgba(0, 0, 0, 0.12)"],
 
         transitionProperty: ["all"],
         transitionDuration: "0s",
