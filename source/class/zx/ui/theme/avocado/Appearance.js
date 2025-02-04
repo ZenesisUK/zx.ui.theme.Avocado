@@ -1190,7 +1190,7 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
         return {
           alignY: "middle",
           padding: 1,
-          textColor: states.selected ? "text-on-primary" : "text-on-surface"
+          textColor: states.disabled ? "text-disabled" : states.selected ? "text-on-primary" : "text-on-surface"
         };
       }
     },
