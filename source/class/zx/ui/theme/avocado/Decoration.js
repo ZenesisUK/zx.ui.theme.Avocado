@@ -946,6 +946,8 @@ qx.Theme.define("zx.ui.theme.avocado.Decoration", {
       }
     },
 
+    "table-header-cell-hovered": "table-header",
+
     "table-header-column-button": {
       include: "table-header"
     },
