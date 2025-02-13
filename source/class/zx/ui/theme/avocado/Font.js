@@ -79,7 +79,7 @@ qx.Theme.define("zx.ui.theme.avocado.Font", {
     },
 
     small: {
-      size: 12,
+      size: 11,
       family: ["AvenirLight"],
       fontName: "AvenirLight"
     },
