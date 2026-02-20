@@ -2088,7 +2088,7 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
       style(states) {
         var result = {
           width: 17,
-          show: "icon",
+          showFeatures: "icon",
           cursor: states.disabled ? undefined : "pointer",
           textColor: "text-on-widget"
         };
