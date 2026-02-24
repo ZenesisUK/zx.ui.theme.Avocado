@@ -1573,8 +1573,6 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
 
     "checkbox/label": "radiobutton/label",
 
-    checkedlistitem: "checkedlist-checkbox",
-
     /*
     ---------------------------------------------------------------------------
       SPINNER
@@ -2874,43 +2872,6 @@ qx.Theme.define("zx.ui.theme.avocado.Appearance", {
           backgroundColor: "rgba(255, 251, 0, 0.53)",
           textDecorationStyle: "dotted",
           textDecorationLine: "underline"
-        };
-      }
-    },
-
-    "checkedlist-checkbox": {
-      alias: "checkbox",
-      include: "checkbox",
-      style(states) {
-        return {
-          margin: [2, 4]
-        };
-      }
-    },
-
-    "checkedlist-checkbox/icon": {
-      include: "checkbox/icon",
-      style(states) {
-        let textColor = "text-on-widget";
-        if (states.disabled) {
-          textColor = "text-on-widget-disabled";
-        } else if (states.selected) {
-          textColor = "text-on-widget-selected";
-        } else if (states.checked || states.undetermined) {
-          textColor = "primary";
-        }
-
-        return {
-          textColor,
-          backgroundColor: states.checked || states.undetermined ? "text-on-widget" : "widget"
-        };
-      }
-    },
-    "checkedlist-checkbox/label": {
-      include: "checkbox/label",
-      style(states) {
-        return {
-          textColor: states.disabled ? "text-on-widget-disabled" : states.selected ? "text-on-widget-selected" : "text-on-widget"
         };
       }
     }
