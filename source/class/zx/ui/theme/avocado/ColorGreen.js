@@ -103,9 +103,9 @@ qx.Theme.define("zx.ui.theme.avocado.ColorGreen", {
 
     // the following colors are used directly in table code
 
-    "table-row-background-focused-selected": "primary-focused",
-    "table-row-background-focused": "primary-alpha-5",
-    "table-row-background-selected": "secondary-alpha-7",
+    "table-row-background-focused-selected": "#151a1e",
+    "table-row-background-focused": "#151a1e",
+    "table-row-background-selected": "#151a1e",
     "table-row-background-even": "transparent",
     "table-row-background-odd": "transparent",
 
