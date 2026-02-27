@@ -125,6 +125,7 @@ qx.Theme.define("zx.ui.theme.avocado.ColorGreen", {
 
     // used in the widget-browser-app
     "text-disabled": "text-disabled-on-surface",
+    "text-selected": "white",
 
     // used in progressive code
     "progressive-table-header": "table-header-cell",
