@@ -9,6 +9,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-   "@qooxdoo/framework": "^7.6.0"
+    "@qooxdoo/framework": "^7.6.0"
   }
 }

@@ -19,16 +19,10 @@
       "AvenirBlack": {
         "fontFaces": [
           {
-            "paths": [
-              "zx/ui/theme/avocado/fonts/avenir/avenir_black.woff",
-              "zx/ui/theme/avocado/fonts/avenir/avenir_black.woff"
-            ]
+            "paths": ["zx/ui/theme/avocado/fonts/avenir/avenir_black.woff", "zx/ui/theme/avocado/fonts/avenir/avenir_black.woff"]
           },
           {
-            "paths": [
-              "zx/ui/theme/avocado/fonts/avenir/avenir_blackoblique.woff",
-              "zx/ui/theme/avocado/fonts/avenir/avenir_blackoblique.woff"
-            ],
+            "paths": ["zx/ui/theme/avocado/fonts/avenir/avenir_blackoblique.woff", "zx/ui/theme/avocado/fonts/avenir/avenir_blackoblique.woff"],
             "fontStyle": "italic"
           }
         ]
@@ -36,16 +30,10 @@
       "AvenirBook": {
         "fontFaces": [
           {
-            "paths": [
-              "zx/ui/theme/avocado/fonts/avenir/avenir_book.woff",
-              "zx/ui/theme/avocado/fonts/avenir/avenir_book.woff"
-            ]
+            "paths": ["zx/ui/theme/avocado/fonts/avenir/avenir_book.woff", "zx/ui/theme/avocado/fonts/avenir/avenir_book.woff"]
           },
           {
-            "paths": [
-              "zx/ui/theme/avocado/fonts/avenir/avenir_bookoblique.woff",
-              "zx/ui/theme/avocado/fonts/avenir/avenir_bookoblique.woff"
-            ],
+            "paths": ["zx/ui/theme/avocado/fonts/avenir/avenir_bookoblique.woff", "zx/ui/theme/avocado/fonts/avenir/avenir_bookoblique.woff"],
             "fontStyle": "italic"
           }
         ]
@@ -53,16 +41,10 @@
       "AvenirHeavy": {
         "fontFaces": [
           {
-            "paths": [
-              "zx/ui/theme/avocado/fonts/avenir/avenir_heavy.woff",
-              "zx/ui/theme/avocado/fonts/avenir/avenir_heavy.woff"
-            ]
+            "paths": ["zx/ui/theme/avocado/fonts/avenir/avenir_heavy.woff", "zx/ui/theme/avocado/fonts/avenir/avenir_heavy.woff"]
           },
           {
-            "paths": [
-              "zx/ui/theme/avocado/fonts/avenir/avenir_heavyoblique.woff",
-              "zx/ui/theme/avocado/fonts/avenir/avenir_heavyoblique.woff"
-            ],
+            "paths": ["zx/ui/theme/avocado/fonts/avenir/avenir_heavyoblique.woff", "zx/ui/theme/avocado/fonts/avenir/avenir_heavyoblique.woff"],
             "fontStyle": "italic"
           }
         ]
@@ -71,17 +53,11 @@
         "fontFaces": [
           {
             "fontFamily": "AvenirLight",
-            "paths": [
-              "zx/ui/theme/avocado/fonts/avenir/avenir_light.woff",
-              "zx/ui/theme/avocado/fonts/avenir/avenir_light.woff"
-            ]
+            "paths": ["zx/ui/theme/avocado/fonts/avenir/avenir_light.woff", "zx/ui/theme/avocado/fonts/avenir/avenir_light.woff"]
           },
           {
             "fontFamily": "AvenirLight",
-            "paths": [
-              "zx/ui/theme/avocado/fonts/avenir/avenir_lightoblique.woff",
-              "zx/ui/theme/avocado/fonts/avenir/avenir_lightoblique.woff"
-            ],
+            "paths": ["zx/ui/theme/avocado/fonts/avenir/avenir_lightoblique.woff", "zx/ui/theme/avocado/fonts/avenir/avenir_lightoblique.woff"],
             "fontStyle": "italic"
           }
         ]
@@ -89,16 +65,10 @@
       "AvenirMedium": {
         "fontFaces": [
           {
-            "paths": [
-              "zx/ui/theme/avocado/fonts/avenir/avenir_medium.woff",
-              "zx/ui/theme/avocado/fonts/avenir/avenir_medium.woff"
-            ]
+            "paths": ["zx/ui/theme/avocado/fonts/avenir/avenir_medium.woff", "zx/ui/theme/avocado/fonts/avenir/avenir_medium.woff"]
           },
           {
-            "paths": [
-              "zx/ui/theme/avocado/fonts/avenir/avenir_mediumoblique.woff",
-              "zx/ui/theme/avocado/fonts/avenir/avenir_mediumoblique.woff"
-            ],
+            "paths": ["zx/ui/theme/avocado/fonts/avenir/avenir_mediumoblique.woff", "zx/ui/theme/avocado/fonts/avenir/avenir_mediumoblique.woff"],
             "fontStyle": "italic"
           }
         ]
@@ -106,16 +76,10 @@
       "Avenir": {
         "fontFaces": [
           {
-            "paths": [
-              "zx/ui/theme/avocado/fonts/avenir/avenir_roman.woff",
-              "zx/ui/theme/avocado/fonts/avenir/avenir_roman.woff"
-            ]
+            "paths": ["zx/ui/theme/avocado/fonts/avenir/avenir_roman.woff", "zx/ui/theme/avocado/fonts/avenir/avenir_roman.woff"]
           },
           {
-            "paths": [
-              "zx/ui/theme/avocado/fonts/avenir/avenir_oblique.woff",
-              "zx/ui/theme/avocado/fonts/avenir/avenir_oblique.woff"
-            ],
+            "paths": ["zx/ui/theme/avocado/fonts/avenir/avenir_oblique.woff", "zx/ui/theme/avocado/fonts/avenir/avenir_oblique.woff"],
             "fontStyle": "italic"
           }
         ]
@@ -123,6 +87,6 @@
     }
   },
   "requires": {
-    "@qooxdoo/framework": "^7.5.1"
+    "@qooxdoo/framework": ">=7.5.1"
   }
 }
