@@ -136,7 +136,7 @@ qx.Class.define("zx.ui.theme.avocado.demo.pages.ToolBar", {
       firstPart.add(checkBox);
       firstPart.add(radioButton1);
       firstPart.add(radioButton2);
-      firstPart.setShow("icon");
+      firstPart.setShowFeatures("icon");
 
       // MenuButton
       var menuButton = new qx.ui.toolbar.MenuButton("Toolbar MenuButton");
